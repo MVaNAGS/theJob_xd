@@ -4,7 +4,7 @@ $template = new template();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
   <head>
         <?php template::getMeta(); ?>
