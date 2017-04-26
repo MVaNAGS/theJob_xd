@@ -1,6 +1,13 @@
 <?php
-include('classes/template.php');
+require_once 'core/Init.php';
 $template = new template();
+
+if(isset($_SESSION['id'])) {
+    $host  = $_SERVER['HTTP_HOST'];
+    $url   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+    header("Location: http://$host$url/sakums.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -14,9 +21,8 @@ $template = new template();
 
   <body>
 
-   <header>
+   <header></header>
 
-   </header>
 
             <form class="logIn">
                 <h4>Pieslēgšanās logs</h4> <br>
@@ -35,9 +41,8 @@ $template = new template();
             </div>
 
 
-
         <footer>
-            <p>Izveidojuši: <br> sdasdasd, sadasdd, asdasds, sdasdasd</p>
+            <p>Izveidojuši: <br> RAM</p>
         </footer>
 
 

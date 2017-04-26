@@ -1,5 +1,5 @@
 <?php
-include('classes/template.php');
+require_once 'core/Init.php';
 $template = new template();
 ?>
 
@@ -16,7 +16,7 @@ $template = new template();
 
  </header>
 
-  <form  class="forma">
+  <form  class="forma" action="register.php" method="POST">
 
     <br><h4>Reģistrācijas logs</h4>
 
@@ -42,17 +42,18 @@ $template = new template();
 
 
     <div>Epasts:<br>
-        <input id="email" placeholder="e-pasts" class="pholder" type="text" name = "epasts">
+        <input id="email" placeholder="E-pasts" class="pholder" type="text" name = "epasts">
     </div> <br>
 
         <input class="button" type="submit" value="Reģistrēties" name = "saglabat">
+
+          <a href="index.php" class="atpakal">Atpakaļ</a>
+
 </form>
-        <div class="atpakal">
-             <a href="index.php">Atpakaļ</a>
-        </div>
+
 
      <footer>
-         <p>Izveidojuši: <br> sdasdasd, sadasdd, asdasds, sdasdasd</p>
+         <p>Izveidojuši: <br> RAM</p>
      </footer>
 
 
